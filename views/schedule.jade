@@ -11,7 +11,7 @@ block content
   div.form-group
     label(for="shareURL") 共有用 URL:
     - var herokuURL = process.env.HEROKU_URL ? process.env.HEROKU_URL : 'http://localhost:8000/'
-    input(type="text" class="form-control" value=`${herokuURL}schedules/${schedule.scheduleId}/`)
+    input(type="text" class="form-control" value="${herokuURL}schedules/${schedule.scheduleId}/")#shareURL
   - var isMine = parseInt(user.id) === schedule.user.userId
   if isMine
     div
